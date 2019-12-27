@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8wv-zV-VB0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--С категорией-->
+        <scene sceneID="hjv-4p-gZ8">
+            <objects>
+                <viewController id="mBx-qK-S4p" customClass="CategorizedView" customModule="Intents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMZ-AU-5x7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUZ-Hp-Wsd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mBx-qK-S4p" id="UAy-Eb-fxm"/>
+                                    <outlet property="delegate" destination="mBx-qK-S4p" id="Pxt-zv-ohV"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYO-RW-Og8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-cU-zwX">
+                                        <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
+                                        <color key="color" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zS2-cU-zwX" firstAttribute="centerX" secondItem="qYO-RW-Og8" secondAttribute="centerX" id="Igh-ZY-ev7"/>
+                                    <constraint firstItem="zS2-cU-zwX" firstAttribute="centerY" secondItem="qYO-RW-Og8" secondAttribute="centerY" id="wPO-GE-fBq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nUZ-Hp-Wsd" firstAttribute="leading" secondItem="gVB-bq-SCR" secondAttribute="leading" id="7xt-tP-IWp"/>
+                            <constraint firstItem="gVB-bq-SCR" firstAttribute="bottom" secondItem="nUZ-Hp-Wsd" secondAttribute="bottom" id="Kzp-gY-N8u"/>
+                            <constraint firstItem="qYO-RW-Og8" firstAttribute="leading" secondItem="gVB-bq-SCR" secondAttribute="leading" id="Sme-De-IuR"/>
+                            <constraint firstItem="qYO-RW-Og8" firstAttribute="top" secondItem="gVB-bq-SCR" secondAttribute="top" id="UJg-Kp-nuN"/>
+                            <constraint firstItem="gVB-bq-SCR" firstAttribute="trailing" secondItem="qYO-RW-Og8" secondAttribute="trailing" id="XMs-BY-rU1"/>
+                            <constraint firstItem="gVB-bq-SCR" firstAttribute="trailing" secondItem="nUZ-Hp-Wsd" secondAttribute="trailing" id="hjq-8W-7iM"/>
+                            <constraint firstItem="nUZ-Hp-Wsd" firstAttribute="top" secondItem="gVB-bq-SCR" secondAttribute="top" id="hmq-J3-Mcr"/>
+                            <constraint firstItem="gVB-bq-SCR" firstAttribute="bottom" secondItem="qYO-RW-Og8" secondAttribute="bottom" id="wHh-Ov-jFv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gVB-bq-SCR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="С категорией" image="categorized" selectedImage="categorized-selected" id="wUl-Vb-jTi"/>
+                    <navigationItem key="navigationItem" title="С категорией" id="vtw-F2-2c4"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="zS2-cU-zwX" id="tIR-bb-1xP"/>
+                        <outlet property="categorizedSentenceTable" destination="nUZ-Hp-Wsd" id="8mm-OF-CeT"/>
+                        <outlet property="coverView" destination="qYO-RW-Og8" id="eFh-k6-pbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juB-kR-ZXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="-141.29464285714286"/>
+        </scene>
+        <!--С категорией-->
+        <scene sceneID="l89-Hc-G1q">
+            <objects>
+                <navigationController id="8wv-zV-VB0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="С категорией" id="oxm-vB-Av5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mhl-4V-iGo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mBx-qK-S4p" kind="relationship" relationship="rootViewController" id="EBM-wu-iaE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2Y-uR-xfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="categorized" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="categorized-selected" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

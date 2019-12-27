@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EYb-8Q-RLA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Без категорий-->
+        <scene sceneID="bCW-eJ-IIk">
+            <objects>
+                <navigationController id="EYb-8Q-RLA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Без категорий" image="uncategorized" selectedImage="uncategorized-selected" id="8BD-Q6-AJJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bgc-5b-3VL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5lE-fG-vD8" kind="relationship" relationship="rootViewController" id="TED-Zh-WAl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Up5-fw-s5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-1037"/>
+        </scene>
+        <!--Без категорий-->
+        <scene sceneID="pXA-ic-6Q7">
+            <objects>
+                <viewController id="5lE-fG-vD8" customClass="UncategorizedView" customModule="Intents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xED-tt-G4c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-it-HeE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="uncategorizedCell" id="1CS-lY-Fx2">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1CS-lY-Fx2" id="BMc-gR-NwA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ReE-kP-jCB" kind="show" identifier="addCategorySegue" id="xu8-eY-1Po"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5lE-fG-vD8" id="BzD-vy-S7c"/>
+                                    <outlet property="delegate" destination="5lE-fG-vD8" id="Qay-r3-weH"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="IAW-ND-5zm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-sC-eqp">
+                                        <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
+                                        <color key="color" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="HcA-sC-eqp" firstAttribute="centerY" secondItem="IAW-ND-5zm" secondAttribute="centerY" id="bW2-cf-dhl"/>
+                                    <constraint firstItem="HcA-sC-eqp" firstAttribute="centerX" secondItem="IAW-ND-5zm" secondAttribute="centerX" id="l1E-K2-4Z4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d2V-w9-PSA" firstAttribute="bottom" secondItem="mQw-it-HeE" secondAttribute="bottom" id="0XP-68-hQQ"/>
+                            <constraint firstItem="IAW-ND-5zm" firstAttribute="bottom" secondItem="mQw-it-HeE" secondAttribute="bottom" id="JHA-Ns-eNl"/>
+                            <constraint firstItem="mQw-it-HeE" firstAttribute="top" secondItem="d2V-w9-PSA" secondAttribute="top" id="PAo-3U-yjl"/>
+                            <constraint firstItem="mQw-it-HeE" firstAttribute="leading" secondItem="d2V-w9-PSA" secondAttribute="leading" id="PBM-Ct-3fm"/>
+                            <constraint firstItem="IAW-ND-5zm" firstAttribute="trailing" secondItem="mQw-it-HeE" secondAttribute="trailing" id="S1K-hV-iZP"/>
+                            <constraint firstItem="d2V-w9-PSA" firstAttribute="trailing" secondItem="mQw-it-HeE" secondAttribute="trailing" id="gi5-cJ-1uU"/>
+                            <constraint firstItem="IAW-ND-5zm" firstAttribute="top" secondItem="mQw-it-HeE" secondAttribute="top" id="rmf-Ax-KMZ"/>
+                            <constraint firstItem="IAW-ND-5zm" firstAttribute="leading" secondItem="mQw-it-HeE" secondAttribute="leading" id="vGn-qd-K37"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d2V-w9-PSA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Без категорий" id="KWt-sa-QKV"/>
+                    <navigationItem key="navigationItem" title="Без категорий" id="g9G-qT-IsF">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Rxn-39-s8O">
+                            <color key="tintColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="LVk-cQ-3vG">
+                            <color key="tintColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addWordUncategorized:" destination="5lE-fG-vD8" id="CWm-Nk-P5n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="HcA-sC-eqp" id="gUU-0m-99e"/>
+                        <outlet property="coverView" destination="IAW-ND-5zm" id="4zV-N1-Iy1"/>
+                        <outlet property="uncategorizedTableView" destination="mQw-it-HeE" id="A4E-oO-hsk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gc-2p-o8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="-1037.2767857142858"/>
+        </scene>
+        <!--AddCategory-->
+        <scene sceneID="NBw-o1-9Vr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCategory" id="ReE-kP-jCB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vcd-XU-w6O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3s-p3-L5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="-1037"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uncategorized" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="uncategorized-selected" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

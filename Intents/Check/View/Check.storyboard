@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6CL-i0-wZB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Проверка-->
+        <scene sceneID="NWL-Q4-LuO">
+            <objects>
+                <navigationController id="6CL-i0-wZB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Проверка" image="check" selectedImage="check-selected" id="cpb-71-BOY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zfp-Yb-TUd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c73-0o-Ucs" kind="relationship" relationship="rootViewController" id="ibF-Mr-XX7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yA9-07-vHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="722"/>
+        </scene>
+        <!--Проверка-->
+        <scene sceneID="inL-BS-yRL">
+            <objects>
+                <viewController id="c73-0o-Ucs" customClass="CheckView" customModule="Intents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HOj-Ws-3Aq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2o8-iJ-TTb">
+                                <rect key="frame" x="-1" y="88" width="416" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SNC-zf-Qly"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg2-mx-7YL">
+                                <rect key="frame" x="50" y="802" width="314" height="40"/>
+                                <color key="backgroundColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LUV-ID-Bxw"/>
+                                </constraints>
+                                <state key="normal" title="Проверить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkButtonTapped:" destination="c73-0o-Ucs" eventType="touchUpInside" id="D46-XY-T64"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWs-as-EZd">
+                                <rect key="frame" x="50" y="288" width="314" height="96"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error red" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-dF-taZ">
+                                        <rect key="frame" x="137" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Q8N-7m-LWU"/>
+                                            <constraint firstAttribute="width" constant="40" id="hVr-hh-AF4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория не распознана" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIs-h3-ROZ">
+                                        <rect key="frame" x="54.5" y="60" width="205.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.71372549019999998" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="XIs-h3-ROZ" firstAttribute="top" secondItem="4Ls-dF-taZ" secondAttribute="bottom" constant="15" id="3Zh-xd-pl5"/>
+                                    <constraint firstAttribute="bottom" secondItem="XIs-h3-ROZ" secondAttribute="bottom" constant="15" id="GFZ-tu-tVP"/>
+                                    <constraint firstItem="4Ls-dF-taZ" firstAttribute="centerX" secondItem="fWs-as-EZd" secondAttribute="centerX" id="fWC-uQ-V6X"/>
+                                    <constraint firstItem="XIs-h3-ROZ" firstAttribute="centerX" secondItem="fWs-as-EZd" secondAttribute="centerX" id="gBV-dL-YZB"/>
+                                    <constraint firstItem="4Ls-dF-taZ" firstAttribute="top" secondItem="fWs-as-EZd" secondAttribute="top" constant="5" id="hJI-ov-gze"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCS-Od-AtB">
+                                <rect key="frame" x="50" y="288" width="314" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Распознана категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN4-86-anM">
+                                        <rect key="frame" x="67" y="15" width="180.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.21176470589999999" green="0.68235294120000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Факт" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJn-Hr-Ofo">
+                                        <rect key="frame" x="125.5" y="51" width="63" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dJn-Hr-Ofo" secondAttribute="bottom" constant="15" id="Cfo-02-Kzh"/>
+                                    <constraint firstItem="dJn-Hr-Ofo" firstAttribute="centerX" secondItem="fCS-Od-AtB" secondAttribute="centerX" id="bUA-hb-CZH"/>
+                                    <constraint firstItem="dJn-Hr-Ofo" firstAttribute="top" secondItem="CN4-86-anM" secondAttribute="bottom" constant="15" id="cxn-nR-ahz"/>
+                                    <constraint firstItem="CN4-86-anM" firstAttribute="centerX" secondItem="fCS-Od-AtB" secondAttribute="centerX" id="fi7-m2-dcE"/>
+                                    <constraint firstItem="CN4-86-anM" firstAttribute="top" secondItem="fCS-Od-AtB" secondAttribute="top" constant="15" id="oau-kS-JKW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2o8-iJ-TTb" firstAttribute="top" secondItem="lwK-fp-nzq" secondAttribute="top" id="2dn-CS-aSM"/>
+                            <constraint firstItem="lwK-fp-nzq" firstAttribute="trailing" secondItem="lg2-mx-7YL" secondAttribute="trailing" constant="50" id="4aa-6e-kgs"/>
+                            <constraint firstItem="lwK-fp-nzq" firstAttribute="trailing" secondItem="fCS-Od-AtB" secondAttribute="trailing" constant="50" id="6mN-3o-IyB"/>
+                            <constraint firstItem="lg2-mx-7YL" firstAttribute="leading" secondItem="lwK-fp-nzq" secondAttribute="leading" constant="50" id="8XC-y6-C6t"/>
+                            <constraint firstItem="lwK-fp-nzq" firstAttribute="trailing" secondItem="fWs-as-EZd" secondAttribute="trailing" constant="50" id="HpO-wx-iMg"/>
+                            <constraint firstItem="fWs-as-EZd" firstAttribute="top" secondItem="2o8-iJ-TTb" secondAttribute="bottom" constant="100" id="Rj2-HA-55M"/>
+                            <constraint firstItem="fCS-Od-AtB" firstAttribute="top" secondItem="2o8-iJ-TTb" secondAttribute="bottom" constant="100" id="TL2-zD-HXU"/>
+                            <constraint firstItem="2o8-iJ-TTb" firstAttribute="leading" secondItem="lwK-fp-nzq" secondAttribute="leading" constant="-1" id="bkY-HK-rm1"/>
+                            <constraint firstItem="lwK-fp-nzq" firstAttribute="trailing" secondItem="2o8-iJ-TTb" secondAttribute="trailing" constant="-1" id="dJF-3R-SKe"/>
+                            <constraint firstItem="fCS-Od-AtB" firstAttribute="leading" secondItem="lwK-fp-nzq" secondAttribute="leading" constant="50" id="hqS-Gz-MqA"/>
+                            <constraint firstItem="lwK-fp-nzq" firstAttribute="bottom" secondItem="lg2-mx-7YL" secondAttribute="bottom" constant="20" id="qUX-SG-5IV"/>
+                            <constraint firstItem="fWs-as-EZd" firstAttribute="leading" secondItem="lwK-fp-nzq" secondAttribute="leading" constant="50" id="wFo-PX-ezK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lwK-fp-nzq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Проверка" id="U5y-ei-bap"/>
+                    <navigationItem key="navigationItem" title="Проверка" id="Ky0-vF-J2J"/>
+                    <connections>
+                        <outlet property="checkButton" destination="lg2-mx-7YL" id="qck-ZQ-TwN"/>
+                        <outlet property="contentTextView" destination="2o8-iJ-TTb" id="VSd-ho-3TS"/>
+                        <outlet property="errorView" destination="fWs-as-EZd" id="jPc-Ic-CJl"/>
+                        <outlet property="successView" destination="fCS-Od-AtB" id="8ts-lW-9Xt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYZ-F5-EEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="721.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="check-selected" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="error red" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A8p-Vw-Vy6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Категоризировать-->
+        <scene sceneID="KtE-VO-aJp">
+            <objects>
+                <viewController id="A8p-Vw-Vy6" customClass="AddCategoryView" customModule="Intents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AaM-sP-S64">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzS-hN-Llb">
+                                <rect key="frame" x="50" y="753" width="314" height="40"/>
+                                <color key="backgroundColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="agQ-Ct-Svx"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSelectCategory:" destination="A8p-Vw-Vy6" eventType="touchUpInside" id="XCL-vW-NWV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TEXT" translatesAutoresizingMaskIntoConstraints="NO" id="noZ-qc-YyC">
+                                <rect key="frame" x="-1" y="94" width="416" height="100"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VE3-Gb-lBd"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-6Q-ziO">
+                                <rect key="frame" x="0.0" y="522" width="414" height="271"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MpY-Be-eB4">
+                                        <rect key="frame" x="50" y="231" width="314" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dze-a0-nCg">
+                                                <rect key="frame" x="0.0" y="0.0" width="149.5" height="40"/>
+                                                <color key="backgroundColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Отменить">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelSelectCategory:" destination="A8p-Vw-Vy6" eventType="touchUpInside" id="k6d-B8-yka"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-Bu-r7i">
+                                                <rect key="frame" x="164.5" y="0.0" width="149.5" height="40"/>
+                                                <color key="backgroundColor" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Добавить">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addSelectCategory:" destination="A8p-Vw-Vy6" eventType="touchUpInside" id="NJY-OP-hPf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Xr0-Ea-2tC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a31-29-hdw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="216" id="3uD-pJ-uem"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="A8p-Vw-Vy6" id="AxA-hi-3UF"/>
+                                            <outlet property="delegate" destination="A8p-Vw-Vy6" id="kBp-wg-6kt"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="a31-29-hdw" firstAttribute="leading" secondItem="6l7-6Q-ziO" secondAttribute="leading" id="4n8-6N-1jf"/>
+                                    <constraint firstAttribute="bottom" secondItem="MpY-Be-eB4" secondAttribute="bottom" id="BEe-3A-0yt"/>
+                                    <constraint firstAttribute="trailing" secondItem="MpY-Be-eB4" secondAttribute="trailing" constant="50" id="Es8-ob-LKJ"/>
+                                    <constraint firstItem="MpY-Be-eB4" firstAttribute="top" secondItem="a31-29-hdw" secondAttribute="bottom" constant="15" id="Gzj-Bd-1Br"/>
+                                    <constraint firstItem="MpY-Be-eB4" firstAttribute="leading" secondItem="6l7-6Q-ziO" secondAttribute="leading" constant="50" id="Rw1-Nq-d4s"/>
+                                    <constraint firstItem="a31-29-hdw" firstAttribute="top" secondItem="6l7-6Q-ziO" secondAttribute="top" id="YfM-1a-V8z"/>
+                                    <constraint firstAttribute="trailing" secondItem="a31-29-hdw" secondAttribute="trailing" id="sg3-Uu-zyO"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RPo-5u-6uY">
+                                <rect key="frame" x="20" y="224" width="374" height="278"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="7" id="dfn-WI-z0G">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="A8p-Vw-Vy6" id="nds-LR-sg0"/>
+                                    <outlet property="delegate" destination="A8p-Vw-Vy6" id="bQ6-19-vBg"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-Ug-Mch">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pPu-Mk-6J6">
+                                        <rect key="frame" x="188.5" y="366" width="37" height="37"/>
+                                        <color key="color" red="0.44699218750000003" green="0.657733609" blue="0.32936197909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="pPu-Mk-6J6" firstAttribute="centerY" secondItem="FPE-Ug-Mch" secondAttribute="centerY" id="GvI-DG-5CW"/>
+                                    <constraint firstItem="pPu-Mk-6J6" firstAttribute="centerX" secondItem="FPE-Ug-Mch" secondAttribute="centerX" id="zys-SS-prs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="trailing" secondItem="mzS-hN-Llb" secondAttribute="trailing" constant="50" id="5RP-6J-M3I"/>
+                            <constraint firstItem="RPo-5u-6uY" firstAttribute="leading" secondItem="GY5-jp-aZR" secondAttribute="leading" constant="20" id="GBa-Wy-KXv"/>
+                            <constraint firstItem="FPE-Ug-Mch" firstAttribute="leading" secondItem="GY5-jp-aZR" secondAttribute="leading" id="Hby-iX-zfo"/>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="trailing" secondItem="FPE-Ug-Mch" secondAttribute="trailing" id="JRk-7Z-0kW"/>
+                            <constraint firstItem="6l7-6Q-ziO" firstAttribute="leading" secondItem="GY5-jp-aZR" secondAttribute="leading" id="LDs-Mc-RKt"/>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="bottom" secondItem="6l7-6Q-ziO" secondAttribute="bottom" constant="20" id="T0D-eV-FDi"/>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="trailing" secondItem="noZ-qc-YyC" secondAttribute="trailing" constant="-1" id="TvF-w3-Scy"/>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="trailing" secondItem="RPo-5u-6uY" secondAttribute="trailing" constant="20" id="U7i-BG-FM9"/>
+                            <constraint firstItem="noZ-qc-YyC" firstAttribute="leading" secondItem="GY5-jp-aZR" secondAttribute="leading" constant="-1" id="cBp-GH-Bly"/>
+                            <constraint firstItem="GY5-jp-aZR" firstAttribute="bottom" secondItem="mzS-hN-Llb" secondAttribute="bottom" constant="20" id="cuJ-QN-EgP"/>
+                            <constraint firstItem="FPE-Ug-Mch" firstAttribute="top" secondItem="GY5-jp-aZR" secondAttribute="top" id="hHx-AY-HU8"/>
+                            <constraint firstItem="6l7-6Q-ziO" firstAttribute="trailing" secondItem="GY5-jp-aZR" secondAttribute="trailing" id="hjN-03-xFS"/>
+                            <constraint firstItem="RPo-5u-6uY" firstAttribute="top" secondItem="noZ-qc-YyC" secondAttribute="bottom" constant="30" id="jkT-JO-2kQ"/>
+                            <constraint firstItem="FPE-Ug-Mch" firstAttribute="bottom" secondItem="GY5-jp-aZR" secondAttribute="bottom" id="pLq-aM-9If"/>
+                            <constraint firstItem="mzS-hN-Llb" firstAttribute="leading" secondItem="GY5-jp-aZR" secondAttribute="leading" constant="50" id="puC-Ob-Gof"/>
+                            <constraint firstItem="noZ-qc-YyC" firstAttribute="top" secondItem="GY5-jp-aZR" secondAttribute="top" constant="50" id="qGC-5j-JJQ"/>
+                            <constraint firstItem="6l7-6Q-ziO" firstAttribute="top" secondItem="RPo-5u-6uY" secondAttribute="bottom" constant="20" id="zIa-M5-MKt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GY5-jp-aZR"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Категоризировать" id="YAd-v2-7PY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="pPu-Mk-6J6" id="kL9-xF-Dok"/>
+                        <outlet property="addButton" destination="2qu-Bu-r7i" id="UPW-5l-SWF"/>
+                        <outlet property="cancelButton" destination="dze-a0-nCg" id="EfP-4C-H7A"/>
+                        <outlet property="categoryPickerView" destination="a31-29-hdw" id="9my-pz-3i5"/>
+                        <outlet property="categoryView" destination="6l7-6Q-ziO" id="hfA-ML-j7c"/>
+                        <outlet property="collectionCategories" destination="RPo-5u-6uY" id="caH-4h-WHS"/>
+                        <outlet property="contentTextView" destination="noZ-qc-YyC" id="3dN-be-G1P"/>
+                        <outlet property="coverView" destination="FPE-Ug-Mch" id="9gA-N9-Ckz"/>
+                        <outlet property="saveButton" destination="mzS-hN-Llb" id="Kad-7R-h5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVd-c7-7jd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3689.8550724637685" y="-1037.2767857142858"/>
+        </scene>
+    </scenes>
+</document>
